@@ -71,3 +71,41 @@ section#root main .card .inner-data > span.title {
     margin-bottom: 1rem;
 }
 
+/*responsiveness*/
+
+@media screen and (max-width: 1399px) {
+    section#root > main {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    section#root {
+        max-width: 700px;
+    }
+
+    section#root > main {
+        justify-content: flex-start;
+    }
+
+    section#root main .card .banner > img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    section#root {
+        max-width: 350px;
+    }
+
+    section#root > main {
+        justify-content: flex-start;
+    }
+
+    section#root main .card .banner > img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
