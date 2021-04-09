@@ -10,6 +10,7 @@
 <section id="root">
     <header>
         <select id="genre" v-model="selectedGenre">
+            <option value="">All genres</option>
             <option v-for="genre in genres" :value="genre">{{ genre }}</option>
         </select>
     </header>

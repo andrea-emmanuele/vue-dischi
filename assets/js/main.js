@@ -29,7 +29,7 @@ new Vue ({
             _vue.genres.sort();
         },
         showAlbum: (album, selectedGenre) => {
-            return album.genre === selectedGenre ? true : !selectedGenre ? true : false;
+            return album.genre === selectedGenre ? true : !selectedGenre;
         }
     },
     created() {
