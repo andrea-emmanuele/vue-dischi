@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #141E30;
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);
+    background: linear-gradient(to right, #243B55, #141E30);
+}
+
+section#root {
+    max-width: 1500px;
+    margin: 5rem auto;
+}
+
+section#root > header {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+section#root header > select {
+    font-size: 2rem;
+    width: 200px;
+    text-align: center;
+}
+
+section#root > main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section#root main > .card {
+    position: relative;
+    cursor: pointer;
+}
+
+section#root main .card .banner > img {
+    width: 500px;
+    height: 500px;
+    object-fit: fill;
+}
+
+section#root main .card > .inner-data {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2.4rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px #999;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity linear 300ms;
+}
+
+section#root main > .card:hover > .inner-data {
+    opacity: 1;
+}
+
+section#root main .card .inner-data > span.title {
+    font-size: 2.7rem;
+    text-align: center;
+    width: 90%;
+    margin-bottom: 1rem;
+}
+

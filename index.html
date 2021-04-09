@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue dischi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<section id="root">
+    <header>
+        <select id="genre" v-model="selectedGenre">
+            <option v-for="genre in genres" :value="genre">{{ genre }}</option>
+        </select>
+    </header>
+    <main>
+        <div v-for="album in albums" v-if="showAlbum(album, selectedGenre)" class="card">
+            <div class="banner">
+                <img :src="album.poster" alt="">
+            </div>
+            <div class="inner-data">
+                <span class="title">{{ album.title }}</span>
+                <span class="author">{{ album.author }}</span>
+                <span class="genre">{{ album.genre }}</span>
+                <span class="year">{{ album.year }}</span>
+            </div>
+        </div>
+    </main>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
